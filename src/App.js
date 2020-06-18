@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Day from './Day';
+import Header from './Header';
+import Days from './Days'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App () {
+
+  const [weatherData, setWeatherData] = useState([
+    {city: 'Amsterdam', temp: '100', rain: 'rainy', clouds: 'cloudy'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'}
+  ]);
+
+  return(
+    <div className="app">
+      <Header city= { weatherData[0].city }/>
+      <Days data= { weatherData }/>
     </div>
   );
 }
