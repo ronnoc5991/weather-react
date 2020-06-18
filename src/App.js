@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import Day from './Day';
 import Header from './Header';
 import Days from './Days'
 
 function App () {
 
   const [weatherData, setWeatherData] = useState([
-    {city: 'Amsterdam', temp: '100', rain: 'rainy', clouds: 'cloudy'},
-    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'},
-    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'},
-    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'},
-    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds'}
+    {city: 'Amsterdam', temp: '90', rain: 'rainy', clouds: 'cloudy', day: 'Monday'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds', day: 'Tuesday'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds', day: 'Wednesday'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds', day: 'Thursday'},
+    {city: 'Amsterdam', temp: '45', rain: 'not rainy', clouds: 'some clouds', day: 'Friday'}
   ]);
 
   return(

@@ -6,7 +6,7 @@ function Days (props) {
     return (
         <div className="days">
             {props.data.map(data => (
-        <Day temp={data.temp} rain={ data.rain } clouds={ data.clouds }/>
+        <Day temp={data.temp} rain={ data.rain } clouds={ data.clouds } day={ data.day } />
       ))}
         </div>
     )

@@ -6,9 +6,9 @@ function Day (props) {
     
     return (
         <div className="day">
-            <h1>{ props.temp } degrees</h1>
-            <h1>{ props.rain }</h1>
-            <h1>{ props.clouds }</h1>
+            <h2>{ props.day }</h2>
+            <h3>{ props.temp } degrees</h3>
+            <h3>{ props.rain }</h3>
         </div>
     )
 }
