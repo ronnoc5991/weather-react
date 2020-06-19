@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import './App.css'
+import {WeatherContext} from './WeatherContext';
 
-function Day (props) {
+function Day () {
+    const {weather, cityInfo, citySetter, loading} = useContext(WeatherContext);
+    const [weatherData, setWeatherData] = weather;
+    const [cityData, setCityData] = cityInfo;
+    const [city, setCity] = citySetter;
+    const [isLoading, setIsLoading] = loading;
     
-    
+
+    console.log(weatherData[0]);
+
     return (
         <div className="day">
-            <h2>{ props.day }</h2>
-            <h3>{ props.temp } degrees</h3>
-            <h3>{ props.rain }</h3>
+            {isLoading 
+            ? (<p>Loading</p>) 
+            : (<p> { weatherData[0].weather[0].description }</p>) }
         </div>
     )
 }

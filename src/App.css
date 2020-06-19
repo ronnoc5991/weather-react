@@ -17,6 +17,11 @@
   text-align: center;
 }
 
+.searchBar {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
 .days {
   display: flex;
   flex-direction: row;
