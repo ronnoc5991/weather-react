@@ -6,39 +6,141 @@
 
 .app {
   min-height: 100vh;
-  background: yellow;
+  max-width: 100vw;
+  background: gray;
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 10% 60% 30%;
+  overflow: hidden;
 }
 
-.header {
+.searchBar {
   grid-row-start: 1;
   grid-row-end: 2;
   text-align: center;
 }
 
-.searchBar {
+.current-weather {
   grid-row-start: 2;
   grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.current-weather-left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: grid;
+  background-color: white;
+  border-radius: 5px;
+  height: 70%;
+  width: 80%;
+  margin: auto;
+}
+
+.city-name {
+
+}
+
+.date {
+
+}
+
+.current-weather-right {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  border-radius: 5px;
+  height: 70%;
+  width: 80%;
+  margin: auto;
+}
+
+.current-weather-right div {
+  margin: auto;
+}
+
+.high-temp {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.low-temp {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.wind {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.sunrise {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.sunset {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 .days {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-items: center;
+  overflow-x: auto;
 }
 
 .day {
-  height: 250px;
-  width: 200px;
+  height: 200px;
+  min-width: 150px;
   background-color: white;
   border-radius: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  bottom: -60%;
-  position: relative;
+  margin-left: 20px;
+}
+
+.forecast {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 2fr;
+  align-items: center;
+}
+
+.forecast-date {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.forecast-time {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.forecast-icon {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.forecast-temp {
+  grid-row-start: 4;
+  grid-row-end: 5;
 }

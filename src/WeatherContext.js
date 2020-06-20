@@ -16,7 +16,7 @@ export const WeatherProvider = (props) => {
         })
         .then((response) => {
             setCityData(response.city);
-            setWeatherData(response.list);
+            setWeatherData(response);
             setIsLoading(false);
         });
     }, [city]);

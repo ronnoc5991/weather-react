@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import CurrentWeather from './CurrentWeather';
 import Days from './Days';
 import {WeatherProvider} from './WeatherContext';
 import SearchWeather from './SearchWeather';
@@ -9,8 +9,8 @@ function App () {
   return(
     <WeatherProvider>
       <div className="app">
-        <Header />
         <SearchWeather />
+        <CurrentWeather />
         <Days />
       </div>
     </WeatherProvider>
