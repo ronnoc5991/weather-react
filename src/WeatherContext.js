@@ -18,6 +18,12 @@ export const WeatherProvider = (props) => {
             setCityData(response.city);
             setWeatherData(response);
             setIsLoading(false);
+        })
+        .catch((error) => {
+            console.log('Error!')
+            setCity('Amsterdam');
+            //look up how to handle errors
+            //app currently crashes when nonsense is submitted
         });
     }, [city]);
 

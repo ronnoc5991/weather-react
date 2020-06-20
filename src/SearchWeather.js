@@ -4,7 +4,6 @@ import {WeatherContext} from './WeatherContext';
 const SearchWeather = () => {
     
     const {weather, cityInfo, citySetter, loading} = useContext(WeatherContext);
-    // const [weatherData, setWeatherData] = weather;
     const [cityData, setCityData] = cityInfo;
     const [city, setCity] = citySetter;
     const [isLoading, setIsLoading] = loading;
@@ -22,8 +21,8 @@ const SearchWeather = () => {
 
     return (
         <form onSubmit={updateCity} className="searchBar">
-            <input type="text" name="city" value= { searchTerm } onChange={ updateSearchTerm }/>
-            <button>Search</button>
+            <input type="text" name="city" autoComplete="off" placeholder="Enter a city..." value= { searchTerm } onChange={ updateSearchTerm }/>
+            <button></button>
         </form>
     )
 }

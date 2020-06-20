@@ -6,6 +6,13 @@ import SearchWeather from './SearchWeather';
 
 function App () {
 
+  
+  document.body.style.backgroundImage = `https://source.unsplash.com/${window.innerWidth}x${window.innerHeight}/?nature`
+
+  // function getBackground () {
+  //   `https://source.unsplash.com/${window.innerWidth}x${window.innerHeight}/?nature`
+  // }
+
   return(
     <WeatherProvider>
       <div className="app">

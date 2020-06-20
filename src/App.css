@@ -9,17 +9,66 @@
   max-width: 100vw;
   background: gray;
   display: grid;
-  grid-template-rows: 10% 60% 30%;
+  grid-template-rows: 10% 50% 40%;
   overflow: hidden;
+  background: url('./mountains.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
 .searchBar {
+  all: unset;
   grid-row-start: 1;
   grid-row-end: 2;
   text-align: center;
+  margin: auto;
+  height: 40px;
+  width: 40%;
+}
+
+.searchBar input {
+  all: unset;
+  background: white;
+  color: black;
+  text-align: left;
+  padding-left: 10px;
+  border-radius: 5px;
+  height: 100%;
+  width: 30%;
+  transition: all 500ms;
+  cursor: text;
+}
+
+.searchBar input:hover {
+  width: 100%;
+}
+
+.searchBar input:focus {
+  width: 100%;
+}
+
+.searchBar button {
+  all: unset;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
 }
 
 .current-weather {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  width: 80%;
+  margin: auto;
+}
+
+.current-weather-top {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.current-weather-bottom {
   grid-row-start: 2;
   grid-row-end: 3;
   display: grid;
@@ -29,20 +78,57 @@
 .current-weather-left {
   grid-column-start: 1;
   grid-column-end: 2;
-  display: grid;
-  background-color: white;
   border-radius: 5px;
   height: 70%;
   width: 80%;
   margin: auto;
+  align-items: center;
 }
 
 .city-name {
-
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 25px;
 }
 
 .date {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 25px;
+}
 
+.current-lower-container {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.current-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: auto;
+}
+
+.current-info {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.current-temp {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 80px;
+  height: 150px;
+  line-height: 150px;
+}
+
+.current-description {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 30px;
 }
 
 .current-weather-right {
@@ -51,15 +137,21 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
-  height: 70%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
   margin: auto;
+  font-size: 25px;
 }
 
 .current-weather-right div {
   margin: auto;
+  text-align: center;
+}
+
+.label {
+  font-size: 15px;
 }
 
 .high-temp {
@@ -98,31 +190,49 @@
 }
 
 .days {
-  display: flex;
-  flex-direction: row;
   grid-row-start: 3;
   grid-row-end: 4;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
   align-items: center;
   overflow-x: auto;
+  margin: auto;
+  width: 80%;
+}
+
+.forecast-title {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.forecast-box {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  margin: auto;
 }
 
 .day {
-  height: 200px;
-  min-width: 150px;
-  background-color: white;
-  border-radius: 5%;
+  height: 150px;
+  min-width: 140px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  margin-left: 20px;
+  margin: 15px 8px;
 }
 
 .forecast {
   height: 100%;
-  display: grid;
-  grid-template-rows: 1fr 1fr 2fr 2fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .forecast-date {
@@ -143,4 +253,5 @@
 .forecast-temp {
   grid-row-start: 4;
   grid-row-end: 5;
+  font-size: 25px;
 }

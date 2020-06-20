@@ -11,13 +11,16 @@ function Days () {
     const [city, setCity] = citySetter;
     const [isLoading, setIsLoading] = loading;
 
-    console.log(weatherData);
-
     return (
         <div className="days">
+            <div className="forecast-title">
+                <h2> Forecast </h2>
+            </div>
+            <div className="forecast-box">
             { isLoading ? 'Loading' : (weatherData.list.map( (timeSlot, i) => {
                 return <Day index= {i} key={i}/> 
             })) }
+            </div>
         </div>
     )
 }
