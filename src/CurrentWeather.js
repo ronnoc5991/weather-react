@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import './App.css'
 import {WeatherContext} from './WeatherContext';
 
-function CurrentWeather () {
+const CurrentWeather = () {
 
     const {weather, cityInfo, citySetter, loading} = useContext(WeatherContext);
     const [weatherData, setWeatherData] = weather;
